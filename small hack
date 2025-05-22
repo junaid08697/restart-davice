@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restarting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .dot {
+      font-size: 40px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .text {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dot">🔄</div>
+  <div class="text">Restarting your phone...</div>
+  <script>
+    // Optional: turn screen black after few seconds
+    setTimeout(() => {
+      document.body.innerHTML = '';
+      document.body.style.backgroundColor = 'black';
+    }, 4000);
+  </script>
+</body>
+</html>
